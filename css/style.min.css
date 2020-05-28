@@ -1,0 +1,30 @@
+.carousel,.carousel .carousel-inner,.carousel .carousel-inner .active,.carousel .carousel-inner .carousel-item,.view,body,html{height:100%}.navbar{background-color:rgba(0,0,0,.2)}.page-footer,.top-nav-collapse{background-color:#1C2331}@media only screen and (max-width:768px){.navbar{background-color:#1C2331}}
+
+			.navbar-brand{
+				display: initial; !important;
+			}
+			#batman{
+				font-family: 'Nunito', sans-serif;
+
+			}
+			@media (max-width:1000px){
+				#nike{
+					height: 20%;
+					width: 20%;
+					margin-left: 0
+				}
+				@media (max-width:1000px){
+				#nike2{
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+				#grad1{
+					align-content: center;
+				}
+.what{
+	background-image: url("giphy.gif");
+	filter: alpha(opacity=10);
+    background-attachment: fixed;
+}
+

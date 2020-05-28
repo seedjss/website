@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #ffffff;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.container .slides-list {
+  width: 100%;
+  list-style: none;
+}
+.container .slides-list li {
+  background: #333;
+  border-radius: 4px;
+  height: 100vh;
+  position: absolute;
+  background-image: url("https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1415&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  transition: transform 0.4s ease-in-out;
+  transform: translateX(-100%);
+}
+.container .slides-list li:first-child {
+  transform: translateX(0) scale(0.6);
+}
+.container .left,
+.container .right {
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  width: 30px;
+  height: 60px;
+  top: 50%;
+  opacity: 0.7;
+  transform: translateY(-50%);
+}
+.container .left {
+  left: 40px;
+}
+.container .left:before {
+  left: 10px;
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 30px;
+  border-radius: 1px;
+  background: white;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  transition: all 0.15s ease-in-out;
+}
+.container .left:hover:before {
+  transform: scale(0.5) translateY(-50%) rotate(45deg);
+}
+.container .left:hover:after {
+  transform: scale(0.5) rotate(315deg);
+}
+.container .left:after {
+  left: 10px;
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 30px;
+  border-radius: 1px;
+  background: white;
+  top: 55%;
+  transform: rotate(90deg);
+  transition: all 0.15s ease-in-out;
+}
+.container .right {
+  right: 40px;
+}
+.container .right:before {
+  right: 10px;
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 30px;
+  border-radius: 1px;
+  background: white;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  transition: all 0.15s ease-in-out;
+}
+.container .right:after {
+  right: 10px;
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 30px;
+  border-radius: 1px;
+  background: white;
+  top: 55%;
+  transform: rotate(90deg);
+  transition: all 0.15s ease-in-out;
+}
+.container .right:hover:before {
+  transform: scale(0.5) translateY(-50%) rotate(-45deg);
+}
+.container .right:hover:after {
+  transform: scale(0.5) rotate(-315deg);
+}
+.container button {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  cursor: pointer;
+  outline: none;
+  border: 3px solid #20e800;
+  padding: 10px 20px;
+  border-radius: 60px;
+  background-color: transparent;
+  color: #fff;
+  box-shadow: 10px 4px 58px rgba(32, 232, 0, 0.25), 0 10px 100px rgba(32, 232, 0, 0.22);
+  transition: all .2s ease-in-out;
+}
+.container button.autoPlayOff {
+  border: 3px solid #ff2e37;
+  box-shadow: 10px 4px 58px rgba(255, 46, 55, 0.25), 0 10px 100px rgba(255, 46, 55, 0.22);
+}
